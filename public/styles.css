@@ -1,14 +1,18 @@
-html {
-  scroll-behavior: smooth;
-}
-
 .masthead {
   height: 80vh;
   min-height: 500px;
-  background-image: url('imgs/rainier.jpg');
+  background-image: url('assets/rainier.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.navbar {
+  transition: top 1s ease;
+}
+
+.navbar-hide {
+  top: -72px;
 }
 
 .main-img {

@@ -8,17 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
+    <script src="jquery.js"></script>
+
     <title>Andy Phan - Developer</title>
   </head>
   <body>
 
     <!-- NAV BAR -->
     <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
+      <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
         <div class="container d-flex">
           <span class="w-100 d-lg-none d-md-none d-block"></span>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="">
             Andy Phan
           </a>
           <div class="w-50 text-right">
@@ -54,8 +59,8 @@
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12 text-center text-md-left text-light">
-            <h1 data-aos="fade-down" data-aos-duration="1000">Hi! I'm Andy.</h1>
-            <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">I'm a software/web developer.</p>
+            <h1 data-aos="fade-down">Hi! I'm Andy.</h1>
+            <p data-aos="fade-right" data-aos-delay="1800">I'm a software/web developer.</p>
           </div>
         </div>
       </div>
@@ -70,17 +75,17 @@
             <hr>
             <p>I am a senior majoring in Computer Science at the University of Washington... To edit later.</p>
             <a href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/imgs/instagram.png" class="social-media">
+              <img src="assets/instagram.png" class="social-media">
             </a>
             <a href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/imgs/facebook.png" class="social-media">
+              <img src="assets/facebook.png" class="social-media">
             </a>
             <a href="https://twitter.com/ndyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/imgs/twitter.png" class="social-media">
+              <img src="assets/twitter.png" class="social-media">
             </a>
           </div>
           <div class="col-6 offset-3 col-md-3 offset-md-1 d-md-block">
-            <img src="assets/imgs/me.png" alt="Andy Phan" class="img-fluid gold main-img">
+            <img src="assets/me.png" alt="Andy Phan" class="img-fluid gold main-img">
           </div>
         </div>
       </div>
@@ -91,7 +96,7 @@
       <div class="container my-5 py-5" data-aos="fade-down">
         <div class="row">
           <div class="col-6 offset-3 col-md-3 offset-md-0 d-md-flex justify-content-center align-items-center">
-            <img src="assets/imgs/udub.png" alt="University of Washington" class="img-fluid purple main-img">
+            <img src="assets/udub.png" alt="University of Washington" class="img-fluid purple main-img">
           </div>
           <div class="col-xs-12 col-md-8 offset-md-1">
             <h2 class="gold">Education</h2>
@@ -143,7 +148,7 @@
     <section id="courses-skills">
       <div class="container my-5 py-5" data-aos="fade-down">
         <div class="row">
-          <div class="col-xs-12 col-lg-6 skills">
+          <div class="col-xs-12 col-lg-6" id="skills">
             <h2 class="purple text-center">Skills</h2>
             <hr>
             <h3>Hard Skills</h3>
@@ -309,7 +314,7 @@
               <li class="list-group-item border-0">Attention to Detail</li>
             </ul>
           </div>
-          <div class="col-xs-12 col-lg-6 top-buffer courses">
+          <div class="col-xs-12 col-lg-6 top-buffer" id="courses">
             <h2 class="purple text-center">Courses</h2>
             <hr>
             <h3>In Progress:</h3>
@@ -337,15 +342,15 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section class="bg-beige" data-aos="fade-down" id="projects">
-      <div class="container my-5 py-5">
-        <h2>Projects</h2>
+    <section class="bg-beige" id="projects">
+      <div class="container my-5 py-5" data-aos="fade-down">
+        <h2 class="gold">Projects</h2>
         <hr>
         <div class="row">
           <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/imgs/website.png">
+                <img class="card-img-top" src="assets/website.png">
               </a>
               <div class="card-body">
                 <div class="card-text">
@@ -354,8 +359,8 @@
                   <p>Tools: HTML, CSS, Bootstrap.</p>
                 </div>
                 <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary" href="">View website</a>
-                  <a type="button" class="btn btn-sm btn-outline-secondary" href="">View code</a>
+                  <a type="button" class="btn btn-sm btn-outline-secondary" href="https://aphan1.pages.cs.washington.edu/personal-website/">View website</a>
+                  <a type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/personal-website">View code</a>
                 </div>
               </div>
             </div>
@@ -363,7 +368,7 @@
           <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/imgs/cherrytrees.jpg">
+                <img class="card-img-top" src="assets/cherrytrees.jpg">
               </a>
               <div class="card-body">
                 <div class="card-text">
@@ -378,7 +383,7 @@
           <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/imgs/cherrytrees.jpg">
+                <img class="card-img-top" src="assets/cherrytrees.jpg">
               </a>
               <div class="card-body">
                 <div class="card-text">
@@ -407,7 +412,10 @@
 
     <!-- AOS Animations Library -->
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 1800,
+        once: true,
+      });
     </script>
   </body>
 </html>
