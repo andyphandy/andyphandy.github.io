@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.masthead {
+  height: 80vh;
+  min-height: 500px;
+  background-image: url('imgs/rainier.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-img {
+  border: 5px solid grey;
+  border-radius: 50%;
+}
+
+.purple {
+  color: #4b2e83;
+  border-color: #4b2e83;
+}
+
+.gold {
+  color: #b7a57a;
+  border-color: #b7a57a;
+}
+
+h3 {
+  font-size: 20px;
+  padding-top: 4px;
+}
+
+#courses-skills h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+.bg-beige {
+  background-color: #f2efe0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+#courses-skills li {
+  padding: 3px;
+}
+
+#courses-skills ul {
+  padding-bottom: 20px;
+}
+
+
+#courses-skills li:hover {
+  background-color: #f5f5f5;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-auto-flow: column;
+}
+
+.stars {
+  position: absolute;
+  right: 10px;
+}
+
+nav a {
+  white-space: nowrap;
+}
+
+.social-media {
+  border-radius: 10%;
+  width: 30px;
+  height: auto;
+}
+
+.social-media:hover {
+  filter: brightness(90%);
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .top-buffer {
+    margin-top: 50px;
+  }
+}
+
+#courses-skills h3, #projects h2 {
+  text-align: center;
+}
+
+.card-img-top {
+  height: 225px;
+  width: 100%;
+  display: block;
+}
+
+.card-img-top:hover {
+  opacity: 0.7;
+}
