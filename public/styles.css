@@ -20,6 +20,10 @@
   border-radius: 50%;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .purple {
   color: #4b2e83;
   border-color: #4b2e83;
@@ -35,7 +39,7 @@ h3 {
   padding-top: 4px;
 }
 
-#courses-skills h3 {
+#courses-skills h3, #contact-me h3 {
   font-size: 24px;
 }
 
@@ -82,16 +86,23 @@ nav a {
 }
 
 .social-media {
-  border-radius: 10%;
   width: 30px;
-  height: auto;
 }
 
-.social-media:hover {
+.contact-img {
+  width: 35px;
+}
+
+.social-media:hover, .contact:hover {
   filter: brightness(90%);
 }
 
-.no-underline {
+.social-media, .contact-img {
+  border-radius: 15%;
+  height: auto;
+}
+
+a {
   text-decoration: none !important;
 }
 
@@ -101,7 +112,7 @@ nav a {
   }
 }
 
-#courses-skills h3, #projects h2 {
+#courses-skills h3, #projects h2, #contact h2 {
   text-align: center;
 }
 
@@ -113,4 +124,8 @@ nav a {
 
 .card-img-top:hover {
   opacity: 0.7;
+}
+
+footer {
+  background-color: #434242;
 }
