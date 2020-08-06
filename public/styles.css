@@ -126,3 +126,8 @@ footer a {
   color: inherit;
   text-decoration: underline;
 }
+
+.stars img {
+  height: 18px;
+  width: auto;
+}

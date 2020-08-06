@@ -16,4 +16,10 @@ $(document).ready(function() {
     $.smoothScroll({ speed: 1500 }, offset);
     return false;
   });
+
+  $('.skills-list li').hover(function() {
+    $(this).find('img').css('height', '20px');
+  }, function() {
+    $(this).find('img').css('height', '18px');
+  })
 });
