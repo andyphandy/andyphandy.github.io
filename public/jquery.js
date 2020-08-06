@@ -16,15 +16,4 @@ $(document).ready(function() {
     $.smoothScroll({ speed: 1500 }, offset);
     return false;
   });
-
-  var lastScrollTop = 0;
-  $(window).scroll(function(e) {
-    var scrollTop = $(this).scrollTop();
-    if (scrollTop < lastScrollTop) {
-      $('.navbar').removeClass('navbar-hide');
-    } else {
-      $('.navbar').addClass('navbar-hide');
-    }
-    lastScrollTop = scrollTop;
-  });
 });

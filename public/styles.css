@@ -7,14 +7,6 @@
   background-repeat: no-repeat;
 }
 
-.navbar {
-  transition: top 1s ease;
-}
-
-.navbar-hide {
-  top: -72px;
-}
-
 .main-img {
   border: 5px solid grey;
   border-radius: 50%;
@@ -103,7 +95,7 @@ nav a {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 @media (max-width: 991.98px) {
@@ -112,7 +104,7 @@ a {
   }
 }
 
-#courses-skills h3, #projects h2, #contact h2 {
+#courses-skills h3, #portfolio h2, #contact h2 {
   text-align: center;
 }
 
@@ -128,4 +120,9 @@ a {
 
 footer {
   background-color: #434242;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: underline;
 }

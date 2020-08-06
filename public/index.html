@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Website icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
 
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
     <script src="jquery.js"></script>
@@ -47,7 +55,7 @@
                 <a href="#courses" class="nav-link m-2 menu-item">Courses</a>
               </li>
               <li class="nav-item">
-                <a href="#projects" class="nav-link m-2 menu-item">Projects</a>
+                <a href="#portfolio" class="nav-link m-2 menu-item">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a href="#contact-me" class="nav-link m-2 menu-item">Contact Me</a>
@@ -74,23 +82,26 @@
     <section id="about-me">
       <div class="container my-5 py-5" data-aos="fade-down">
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-12 col-md-8">
             <h2 class="purple">Who I am.</h2>
             <hr>
-            <p>I am a senior majoring in Computer Science at the University of Washington... To edit later.</p>
+            <p>I am a senior at the University of Washington majoring in Computer Science.</p>
+            <p>What I am doing</p>
+            <p>Why I enjoy my work</p>
+            <p>Other interests</p>
             <a type="button" class="btn btn-primary" href="assets/Andy_Phan_Resume.pdf" download>Download my resume</a>
             <a href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/instagram.png" class="social-media">
+              <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
             </a>
             <a href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/facebook.png" class="social-media">
+              <img src="assets/facebook.png" alt="Facebook icon" class="social-media">
             </a>
             <a href="https://twitter.com/ndyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/twitter.png" class="social-media">
+              <img src="assets/twitter.png" alt="Twitter icon" class="social-media">
             </a>
           </div>
-          <div class="col-6 offset-3 col-md-3 offset-md-1 d-md-block">
-            <img src="assets/me.png" alt="Andy Phan" class="img-fluid gold main-img">
+          <div class="col-6 offset-3 col-md-3 offset-md-1 mt-5 mt-md-3">
+            <img src="assets/me.png" alt="A photo of Andy" class="img-fluid gold main-img">
           </div>
         </div>
       </div>
@@ -100,10 +111,10 @@
     <section class="bg-beige" id="education">
       <div class="container my-5 py-5" data-aos="fade-down">
         <div class="row">
-          <div class="col-6 offset-3 col-md-3 offset-md-0 d-md-flex justify-content-center align-items-center">
-            <img src="assets/udub.png" alt="University of Washington" class="img-fluid purple main-img">
+          <div class="col-6 offset-3 col-md-3 offset-md-0 mb-5 mb-md-3 d-md-flex align-items-center">
+            <img src="assets/udub.png" alt="A photo of University of Washington" class="img-fluid purple main-img">
           </div>
-          <div class="col-xs-12 col-md-8 offset-md-1">
+          <div class="col-12 col-md-8 offset-md-1">
             <h2 class="gold">Where I learned.</h2>
             <hr>
             <div class="row my-3" data-aos="fade-down">
@@ -115,8 +126,11 @@
               </div>
               <div class="col-7 offset-1">
                 <h4>B.S. Computer Science</h4>
-                <p>Currently in progress. I am honored to be studying at the Paul G. Allen School of
-                  Computer Science and Engineering... To edit later.</p>
+                <p>
+                  Currently in progress. I am honored to be studying at the Paul G. Allen School of
+                  Computer Science and Engineering. Here, I am learning about data structures, algorithms,
+                  web development, probabilty, proofs, software programming, and so much more.
+                </p>
               </div>
             </div>
             <div class="row my-3" data-aos="fade-down">
@@ -128,9 +142,11 @@
               </div>
               <div class="col-7 offset-1">
                 <h4>Associates of Arts Transfer</h4>
-                <p>As a high-schooler, I took college courses at a local community college through the
-                  Running Start program. There, I studied calculus-based physics, public speaking, civics,
-                and social problems.</p>
+                <p>
+                  As a high-schooler, I took college courses at a local community college through the
+                  Running Start program. There, I studied introductory programming, calculus-based physics,
+                  public speaking, civics, and social problems.
+                </p>
               </div>
             </div>
               <div class="row my-3" data-aos="fade-down">
@@ -142,7 +158,11 @@
                 </div>
                 <div class="col-7 offset-1">
                   <h4>High School Diploma</h4>
-                  <p>To edit later.</p>
+                  <p>
+                    While in high school, I excelled in my math, science, and robotics classes. I have
+                    always been competitive and passionate in my interests, so I worked hard to be the
+                    best in music competitions and sports.
+                  </p>
                 </div>
           </div>
         </div>
@@ -153,7 +173,7 @@
     <section id="courses-skills">
       <div class="container my-5 py-5" data-aos="fade-down">
         <div class="row">
-          <div class="col-xs-12 col-lg-6" id="skills">
+          <div class="col-12 col-lg-6" id="skills">
             <h2 class="purple text-center">What I've learned.</h2>
             <hr>
             <h3>Hard Skills</h3>
@@ -220,7 +240,7 @@
                 </div>
               </li>
               <li class="list-group-item border-0 d-flex">
-                <span>Node.JS</span>
+                <span>Node.js</span>
                 <div class="stars">
                   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="#b7a57a" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -303,28 +323,27 @@
             </ul>
             <h3>Soft Skills</h3>
             <ul class="list-group skills-list">
-              <li class="list-group-item border-0">Public Speaking</li>
               <li class="list-group-item border-0">Problem Solving</li>
+              <li class="list-group-item border-0">Time Management</li>
+              <li class="list-group-item border-0">Organization</li>
+              <li class="list-group-item border-0">Reliability</li>
+              <li class="list-group-item border-0">Adaptability</li>
+              <li class="list-group-item border-0">Dedication</li>
+              <li class="list-group-item border-0">Multitasking</li>
+              <li class="list-group-item border-0">Attention to Detail</li>
               <li class="list-group-item border-0">Cooperation</li>
               <li class="list-group-item border-0">Respectfulness</li>
               <li class="list-group-item border-0">Empathy</li>
               <li class="list-group-item border-0">Teamwork</li>
-              <li class="list-group-item border-0">Dedication</li>
-              <li class="list-group-item border-0">Multitasking</li>
-              <li class="list-group-item border-0">Organization</li>
-              <li class="list-group-item border-0">Reliability</li>
-              <li class="list-group-item border-0">Adaptability</li>
+              <li class="list-group-item border-0">Public Speaking</li>
               <li class="list-group-item border-0">Listening</li>
-              <li class="list-group-item border-0">Time Management</li>
-              <li class="list-group-item border-0">Attention to Detail</li>
             </ul>
           </div>
-          <div class="col-xs-12 col-lg-6 top-buffer" id="courses">
-            <h2 class="purple text-center">What I took.</h2>
+          <div class="col-12 col-lg-6 top-buffer" id="courses">
+            <h2 class="purple text-center">What I've taken.</h2>
             <hr>
             <h3>In Progress:</h3>
             <ul class="list-group">
-              <li class="list-group-item border-0">CSE 473 - Artificial Intelligence</li>
               <li class="list-group-item border-0">CSE 446 - Machine Learning</li>
               <li class="list-group-item border-0">CSE 391 - Systems and Software Tools</li>
               <li class="list-group-item border-0">CSE 351 - The Hardware/Software Interface</li>
@@ -346,22 +365,22 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="bg-beige" id="projects">
+    <!-- PORTFOLIO SECTION -->
+    <section class="bg-beige" id="portfolio">
       <div class="container text-center my-5 py-5" data-aos="fade-down">
-        <h2 class="gold">What I've Made.</h2>
+        <h2 class="gold">What I can do.</h2>
         <hr>
         <div class="row">
-          <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/website.png">
+                <img class="card-img-top" alt="A photo of my website" src="assets/website.png">
               </a>
               <div class="card-body">
                 <div class="card-text">
                   <h4>Personal Website</h4>
                   <p>Build a website for personal endeavors.</p>
-                  <p>Tools: HTML, CSS, Bootstrap.</p>
+                  <p>Tools: HTML, CSS, Bootstrap, jQuery.</p>
                 </div>
                 <div class="btn-group">
                   <a type="button" class="btn btn-sm btn-outline-secondary" href="https://aphan1.pages.cs.washington.edu/personal-website/">View website</a>
@@ -370,40 +389,40 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/cherrytrees.jpg">
+                <img class="card-img-top" alt="UW cherry trees" src="assets/cherrytrees.jpg">
               </a>
               <div class="card-body">
                 <div class="card-text">
-                  <h4>Project Title</h4>
-                  <p>Project Description</p>
-                  <p>Project Tools</p>
+                  <h4>TBA</h4>
+                  <p>Project coming soon!</p>
+                  <p>Tools: N/A</p>
                 </div>
-                <a type="button" class="btn btn-sm btn-outline-secondary" href="">View code</a>
+                <a type="button" class="btn btn-sm btn-outline-secondary disabled" href="">View code</a>
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm bg-white">
               <a href="">
-                <img class="card-img-top" src="assets/cherrytrees.jpg">
+                <img class="card-img-top" alt="UW cherry trees" src="assets/cherrytrees.jpg">
               </a>
               <div class="card-body">
                 <div class="card-text">
-                  <h4>Project Title</h4>
-                  <p>Project Description</p>
-                  <p>Project Tools</p>
+                  <h4>TBA</h4>
+                  <p>Project coming soon!</p>
+                  <p>Tools: N/A</p>
                 </div>
-                <a type="button" class="btn btn-sm btn-outline-secondary" href="">View code</a>
+                <a type="button" class="btn btn-sm btn-outline-secondary disabled" href="">View code</a>
               </div>
             </div>
           </div>
         </div>
         <p>Check out my GitLab for more:</p>
         <a href="https://gitlab.cs.washington.edu/aphan1" class="contact">
-          <img src="assets/gitlab.png" class="contact-img">
+          <img src="assets/gitlab.png" alt="Gitlab icon" class="contact-img">
           <span>https://gitlab.cs.washington.edu/aphan1</span>
         </a>
       </div>
@@ -418,23 +437,23 @@
         <p>Like what you see? Let's work together. Here are ways to contact me.</p>
         <div>
           <div class="row">
-            <div class="col-xs-9 offset-md-3 col-lg-8 offset-lg-4">
+            <div class="col-9 offset-md-3 col-lg-8 offset-lg-4">
               <ul class="list-group text-left">
                 <li class="list-group-item border-0">
                   <a href="https://www.linkedin.com/in/andy-phan-cs/" class="contact">
-                    <img src="assets/linkedin.png" class="contact-img">
+                    <img src="assets/linkedin.png" alt="LinkedIn icon" class="contact-img">
                     <span>www.linkedin.com/in/andy-phan-cs</span>
                   </a>
                 </li>
                 <li class="list-group-item border-0">
                   <a href="https://twitter.com/ndyphandy" class="contact">
-                    <img src="assets/twitter.png" class="contact-img">
+                    <img src="assets/twitter.png" alt="Twitter icon" class="contact-img">
                     <span>https://twitter.com/ndyphandy</span>
                   </a>
                 </li>
                 <li class="list-group-item border-0">
                   <a href="mailto:aphan1@cs.washington.edu" class="contact">
-                    <img src="assets/gmail.png" class="contact-img">
+                    <img src="assets/gmail.png" alt="Gmail icon" class="contact-img">
                     <span>mailto:aphan1@cs.washington.edu</span>
                   </a>
                 </li>
@@ -446,28 +465,22 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="page-footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-4 offset-2">
-            First column
-            <p>random words</p>
-            <p>random word</p>
-            <p>random stuff</p>
-            <p>random things</p>
-          </div>
-          <div class="col-4">
-            Second column
-            <p>random words</p>
-            <p>random word</p>
-            <p>random stuff</p>
-            <p>random things</p>
+    <footer class="page-footer pt-5 pb-3">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-8 text-left">
+              <p>
+                Header: <a href="https://uwphotos.smugmug.com/Places-UW-and-WA/Pacific-Northwest-PNW/i-9Nrcbfg/A">Mount Rainier</a>.
+                Education: <a href="http://staff.washington.edu/paymana/uw_photos.html">The Quad</a>.
+                Portfolio: <a href="https://uwphotos.smugmug.com/Cherry-Blossoms/i-dSWSGkR/A">The Quad 2</a>.
+              </p>
+            </div>
+            <div class="col-12 col-md-4 text-right">
+              <p> © 2020 <a href="">Andy Phan</a>. All rights reserved.</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="footer-copyright text-center">
-        Copyright
       </div>
     </footer>
 
