@@ -1,5 +1,12 @@
+/**
+ * jQuery file that provides animations to the personal website.
+ */
 $(document).ready(function() {
-  $('.nav-item a').on('click', function(e) {
+
+  /**
+   * Smooth scroll functionality when clicking a link anchor.
+   */
+  $('a').on('click', function(e) {
     var el = $( e.target.getAttribute('href') );
     var elOffset = el.offset().top;
     var elHeight = el.height();
@@ -17,6 +24,9 @@ $(document).ready(function() {
     return false;
   });
 
+  /**
+   * Enlarges stars when hovering of hard skills.
+   */
   $('.skills-list li').hover(function() {
     $(this).find('img').css('height', '20px');
   }, function() {

@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+  This is the index.html page for my personal website project. It is essentially
+  an interactice resume that gives a summary of me, my education, my skills and courses,
+  my portfolio, and ways to contact me.
+  ***
+-->
 <html lang="en">
   <head>
     <!-- Meta tags -->
@@ -85,20 +91,43 @@
           <div class="col-12 col-md-8">
             <h2 class="purple">Who I am.</h2>
             <hr>
-            <p>I am a senior at the University of Washington majoring in Computer Science.</p>
-            <p>What I am doing</p>
-            <p>Why I enjoy my work</p>
-            <p>Other interests</p>
-            <a type="button" class="btn btn-primary" href="assets/Andy_Phan_Resume.pdf" download>Download my resume</a>
-            <a href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
-            </a>
-            <a href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/facebook.png" alt="Facebook icon" class="social-media">
-            </a>
-            <a href="https://twitter.com/ndyphandy" target="_blank" rel="noopener noreferrer" class="no-underline">
-              <img src="assets/twitter.png" alt="Twitter icon" class="social-media">
-            </a>
+            <div class="row">
+              <div class="col-12 col-lg-10">
+                <p>
+                  Future software developer. I am a senior majoring in computer science at the University
+                  of Washington. Ever since I was a kid, I have been passionate about all things computers, and this brought
+                  me to the Paul G. Allen School. The most valuable lesson I've learned here is the importantance
+                  of writing clean, maintainable code that not only I can understand, but others can, too.
+                </p>
+                <p>
+                  In addition to software development, I create slick, cutting-edge websites.
+                  After taking my class in web development, I find joy in creating full-stack websites
+                  using HTML, CSS, JavaScript for the front-end and SQL and Node.js for the back-end. At this
+                  time, I am strengthening my back-end skills.
+                </p>
+                <p>
+                  When I'm not studying or working on projects, I love to play the piano, go on long runs,
+                  and mess around on my Raspberry Pi.
+                </p>
+                <p>
+                  Feel free to download my resume and/or <a href="#contact-me">contact me.</a>
+                </p>
+                <div class="d-flex justify-content-between">
+                  <a type="button" class="btn btn-primary" href="assets/Andy_Phan_Resume.pdf" download>Download my resume</a>
+                  <div>
+                    <a href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="fun-media">
+                      <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
+                    </a>
+                    <a href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="fun-media">
+                      <img src="assets/facebook.png" alt="Facebook icon" class="social-media">
+                    </a>
+                    <a href="https://twitter.com/ndyphandy" target="_blank" rel="noopener noreferrer" class="fun-media">
+                      <img src="assets/twitter.png" alt="Twitter icon" class="social-media">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-6 offset-3 col-md-3 offset-md-1 mt-5 mt-md-3">
             <img src="assets/me.png" alt="A photo of Andy" class="img-fluid gold main-img">
@@ -176,7 +205,7 @@
           <div class="col-12 col-lg-6" id="skills">
             <h2 class="purple text-center">What I've learned.</h2>
             <hr>
-            <h3>Hard Skills</h3>
+            <h3 class="text-center">Hard Skills</h3>
             <ul class="list-group skills-list">
               <li class="list-group-item border-0 d-flex">
                 <span>Java</span>
@@ -273,7 +302,7 @@
                 </div>
               </li>
             </ul>
-            <h3>Soft Skills</h3>
+            <h3 class="text-center">Soft Skills</h3>
             <ul class="list-group skills-list">
               <li class="list-group-item border-0">Problem Solving</li>
               <li class="list-group-item border-0">Time Management</li>
@@ -294,14 +323,14 @@
           <div class="col-12 col-lg-6 top-buffer" id="courses">
             <h2 class="purple text-center">What I've taken.</h2>
             <hr>
-            <h3>In Progress:</h3>
+            <h3 class="text-center">In Progress:</h3>
             <ul class="list-group">
               <li class="list-group-item border-0">CSE 446 - Machine Learning</li>
               <li class="list-group-item border-0">CSE 391 - Systems and Software Tools</li>
               <li class="list-group-item border-0">CSE 351 - The Hardware/Software Interface</li>
               <li class="list-group-item border-0">CSE 331 - Software Design and Implementation</li>
             </ul>
-            <h3>Completed:</h3>
+            <h3 class="text-center">Completed:</h3>
             <ul class="list-group">
               <li class="list-group-item border-0">CSE 332 - Data Structures and Algorithms</li>
               <li class="list-group-item border-0">CSE 312 - Foundations of Computing II</li>
@@ -320,11 +349,11 @@
     <!-- PORTFOLIO SECTION -->
     <section class="bg-beige" id="portfolio">
       <div class="container text-center my-5 py-5" data-aos="fade-down">
-        <h2 class="gold">What I can do.</h2>
+        <h2 class="gold text-center">What I can do.</h2>
         <hr>
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm bg-white">
+            <div class="card mb-4 shadow-sm">
               <a href="">
                 <img class="card-img-top" alt="A photo of my website" src="assets/website.png">
               </a>
@@ -342,7 +371,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm bg-white">
+            <div class="card mb-4 shadow-sm">
               <a href="">
                 <img class="card-img-top" alt="UW cherry trees" src="assets/cherrytrees.jpg">
               </a>
@@ -357,7 +386,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm bg-white">
+            <div class="card mb-4 shadow-sm">
               <a href="">
                 <img class="card-img-top" alt="UW cherry trees" src="assets/cherrytrees.jpg">
               </a>
@@ -383,7 +412,7 @@
     <!-- CONTACT ME SECTION -->
     <section id="contact-me">
       <div class="container text-center my-5 py-5" data-aos="fade-down">
-        <h2 class="purple">Let's connect.</h2>
+        <h2 class="purple text-center">Let's connect.</h2>
         <hr>
         <h3>I'm currently available for work.</h3>
         <p>Like what you see? Let's work together. Here are ways to contact me.</p>

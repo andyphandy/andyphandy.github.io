@@ -1,3 +1,10 @@
+/*
+  ***
+  This is the styles.css file that helps style my personal website. Most styling
+  is done using Bootstrap, but these are used on top of that.
+  ***
+*/
+
 .masthead {
   height: 80vh;
   min-height: 500px;
@@ -7,13 +14,16 @@
   background-repeat: no-repeat;
 }
 
-.main-img {
-  border: 5px solid grey;
-  border-radius: 50%;
-}
-
 body {
   font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  white-space: nowrap;
 }
 
 .purple {
@@ -24,6 +34,10 @@ body {
 .gold {
   color: #b7a57a;
   border-color: #b7a57a;
+}
+
+.bg-beige {
+  background-color: #f2efe0;
 }
 
 h3 {
@@ -40,12 +54,9 @@ h4 {
   padding-top: 8px;
 }
 
-.bg-beige {
-  background-color: #f2efe0;
-}
-
-.bg-white {
-  background-color: white;
+.main-img {
+  border: 5px solid grey;
+  border-radius: 50%;
 }
 
 #courses-skills li {
@@ -73,8 +84,9 @@ h4 {
   right: 10px;
 }
 
-nav a {
-  white-space: nowrap;
+.stars img {
+  height: 18px;
+  width: auto;
 }
 
 .social-media {
@@ -85,27 +97,13 @@ nav a {
   width: 35px;
 }
 
-.social-media:hover, .contact:hover {
-  filter: brightness(90%);
-}
-
 .social-media, .contact-img {
   border-radius: 15%;
   height: auto;
 }
 
-a {
-  text-decoration: none;
-}
-
-@media (max-width: 991.98px) {
-  .top-buffer {
-    margin-top: 50px;
-  }
-}
-
-#courses-skills h3, #portfolio h2, #contact h2 {
-  text-align: center;
+.social-media:hover, .contact:hover {
+  filter: brightness(90%);
 }
 
 .card-img-top {
@@ -127,7 +125,8 @@ footer a {
   text-decoration: underline;
 }
 
-.stars img {
-  height: 18px;
-  width: auto;
+@media (max-width: 991.98px) {
+  .top-buffer {
+    margin-top: 50px;
+  }
 }
