@@ -10,6 +10,16 @@
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Andy Phan — software engineer. UW CSE graduate. Portfolio, projects, and ways to get in touch.">
+    <meta name="author" content="Andy Phan">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Andy Phan — Software Engineer">
+    <meta property="og:description" content="Software engineer. UW CSE graduate. Portfolio, projects, and ways to get in touch.">
+    <meta property="og:url" content="https://andyphandy.github.io/">
+    <meta property="og:image" content="https://andyphandy.github.io/assets/me.png">
+    <meta name="twitter:card" content="summary">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -20,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
 
@@ -38,16 +48,16 @@
       <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
         <div class="container d-flex">
           <span class="w-100 d-lg-none d-md-none d-block"></span>
-          <a class="navbar-brand" href="">
+          <a class="navbar-brand" href="#">
             Andy Phan
           </a>
-          <div class="w-50 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+          <div class="w-50 text-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
           <div class="collapse navbar-collapse text-center" id="navBar">
-            <ul class="nav navbar-nav ml-auto flex-nowrap">
+            <ul class="nav navbar-nav ms-auto flex-nowrap">
               <li class="nav-item">
                 <a href="#about-me" class="nav-link m-2 menu-item">About Me</a>
               </li>
@@ -78,7 +88,7 @@
         <div class="row h-100 align-items-center">
           <div class="col-12 text-center text-md-left text-light">
             <h1 data-aos="fade-down">Hi! I'm Andy.</h1>
-            <p data-aos="fade-right" data-aos-delay="1800">I'm a software/web developer.</p>
+            <p data-aos="fade-right" data-aos-delay="400">[Add: software engineer at Company].</p>
           </div>
         </div>
       </div>
@@ -94,20 +104,20 @@
             <div class="row">
               <div class="col-12 col-lg-10">
                 <p>
-                  Software developer. I am a senior majoring in computer science at the University
-                  of Washington. Ever since I was a kid, I have been passionate about all things computers, and this brought
-                  me to the Paul G. Allen School. The most valuable lesson I've learned here is the importance
-                  of writing clean, maintainable code that not only I can understand, but others can, too.
+                  Software engineer. I graduated from the Paul G. Allen School of Computer Science
+                  &amp; Engineering at the University of Washington and have been
+                  [Add: building X at Company] ever since. Ever since I was a kid I've been
+                  passionate about all things computers, and the most valuable lesson I've taken
+                  with me is the importance of writing clean, maintainable code that not only I
+                  can understand, but others can, too.
                 </p>
                 <p>
-                  In addition to software development, I create slick, cutting-edge websites.
-                  After taking my class in web development, I find joy in creating full-stack websites
-                  using HTML, CSS, JavaScript for the front-end and SQL and Node.js for the back-end. At this
-                  time, I am strengthening my back-end skills.
+                  [Add: 1–2 sentences on what you work on day-to-day — the stack, the kinds
+                  of problems, anything you're proud of shipping.]
                 </p>
                 <p>
-                  When I'm not studying or working on projects, I love to play the piano, go on long runs,
-                  and mess around on my Raspberry Pi.
+                  When I'm not at the keyboard, I love to play the piano, go on long runs, and
+                  mess around on my Raspberry Pi.
                 </p>
                 <p>
                   Feel free to download my resume and/or <a href="#contact-me">contact me.</a>
@@ -115,11 +125,16 @@
                 <div class="d-flex justify-content-between">
                   <a type="button" class="btn btn-primary" href="assets/Andy_Phan_Resume.pdf" download>Download my resume</a>
                   <div>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="fun-media">
-                      <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
+                    <a href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer" class="fun-media" aria-label="GitHub">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-media" style="color:#333;">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.13v3.15c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                      </svg>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="fun-media">
-                      <img src="assets/facebook.png" alt="Facebook icon" class="social-media">
+                    <a href="https://www.linkedin.com/in/andy-phan-cs/" target="_blank" rel="noopener noreferrer" class="fun-media" aria-label="LinkedIn">
+                      <img src="assets/linkedin.png" alt="LinkedIn icon" class="social-media">
+                    </a>
+                    <a href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="fun-media" aria-label="Instagram">
+                      <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
                     </a>
                   </div>
                 </div>
@@ -147,16 +162,17 @@
               <div class="col-4">
                 <h3>University of Washington</h3>
                 <p>Sep 2019 - Mar 2022
+                  <br> B.S. Computer Science
                   <br> GPA: 3.81
                 </p>
               </div>
               <div class="col-7 offset-1">
                 <h4>B.S. Computer Science</h4>
                 <p>
-                  Currently in progress. I am honored to be studying at the Paul G. Allen School of
-                  Computer Science and Engineering. Here, I am learning about machine learning,
+                  Graduated from the Paul G. Allen School of Computer Science and Engineering,
+                  where I studied machine learning, artificial intelligence, security, networks,
+                  software programming, and so much more.
                 </p>
-                artificial intelligence, security, networks, software programming, and so much more.
               </div>
             </div>
             <div class="row my-3" data-aos="fade-down">
@@ -190,6 +206,7 @@
                     best in music competitions and sports.
                   </p>
                 </div>
+              </div>
           </div>
         </div>
       </div>
@@ -302,53 +319,18 @@
                   <img src="assets/star.png" alt="Gold star">
                 </div>
               </li>
-            </ul>
-            <h3 class="text-center">Soft Skills</h3>
-            <ul class="list-group skills-list">
-              <li class="list-group-item border-0">Problem Solving</li>
-              <li class="list-group-item border-0">Time Management</li>
-              <li class="list-group-item border-0">Organization</li>
-              <li class="list-group-item border-0">Reliability</li>
-              <li class="list-group-item border-0">Adaptability</li>
-              <li class="list-group-item border-0">Dedication</li>
-              <li class="list-group-item border-0">Multitasking</li>
-              <li class="list-group-item border-0">Attention to Detail</li>
-              <li class="list-group-item border-0">Cooperation</li>
-              <li class="list-group-item border-0">Respectfulness</li>
-              <li class="list-group-item border-0">Empathy</li>
-              <li class="list-group-item border-0">Teamwork</li>
-              <li class="list-group-item border-0">Public Speaking</li>
-              <li class="list-group-item border-0">Listening</li>
+              <!-- [Add: TypeScript, your current stack, cloud platforms, frameworks picked up since 2022, etc.] -->
             </ul>
           </div>
           <div class="col-12 col-lg-6 top-buffer" id="courses">
             <h2 class="purple text-center">What I've taken.</h2>
             <hr>
-            <h3 class="text-center">In Progress:</h3>
-              <li class="list-group-item border-0">CSE 451 - Introduction to Operating Systems</li> 
-              <li class="list-group-item border-0">CSE 452 - Distributed Systems</li>
-              <li class="list-group-item border-0">CSE 455 - Computer Vision</li>
-            <ul class="list-group">
-
-            </ul>
-            <h3 class="text-center">Completed:</h3>
-            <ul class="list-group">
-              <li class="list-group-item border-0">CSE 446 - Machine Learning</li> 
-              <li class="list-group-item border-0">CSE 473 - Introduction to Artificial Intelligence</li>
-              <li class="list-group-item border-0">CSE 421 - Introduction to Algorithms</li>
-              <li class="list-group-item border-0">CSE 461 - Introduction to Computer Networks</li>
-              <li class="list-group-item border-0">CSE 484 - Computer Security</li>
-              <li class="list-group-item border-0">CSE 333 - Systems Programming</li>
-              <li class="list-group-item border-0">CSE 444 - Database Systems Internals</li>
-              <li class="list-group-item border-0">CSE 391 - Systems and Software Tools</li>
-              <li class="list-group-item border-0">CSE 351 - The Hardware/Software Interface</li>
-              <li class="list-group-item border-0">CSE 344 - Introduction to Data Management</li>
-              <li class="list-group-item border-0">CSE 331 - Software Design and Implementation</li>
-              <li class="list-group-item border-0">CSE 332 - Data Structures and Algorithms</li>
-              <li class="list-group-item border-0">CSE 312 - Foundations of Computing II</li>
-              <li class="list-group-item border-0">CSE 311 - Foundations of Computing I</li>
-              <li class="list-group-item border-0">CSE 154 - Web Programming</li>
-            </ul>
+            <p class="text-center">
+              Selected coursework: Operating Systems, Distributed Systems, Computer Vision,
+              Machine Learning, Artificial Intelligence, Algorithms, Computer Networks,
+              Computer Security, Systems Programming, Database Systems, Software Design,
+              and Data Structures.
+            </p>
           </div>
         </div>
       </div>
@@ -362,7 +344,7 @@
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm">
-              <a href="">
+              <a href="https://andyphandy.github.io/">
                 <img class="card-img-top" alt="A photo of my website" src="assets/website.png">
               </a>
               <div class="card-body">
@@ -373,14 +355,14 @@
                 </div>
                 <div class="btn-group">
                   <a type="button" class="btn btn-sm btn-outline-secondary" href="https://andyphandy.github.io/">View website</a>
-                  <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/personal-website">View code</a>
+                  <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://github.com/andyphandy/andyphandy.github.io">View code</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1/mazealgorithms">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyphandy/mazealgorithms">
                 <img class="card-img-top" alt="Maze algorithm project" src="assets/maze.gif">
               </a>
               <div class="card-body">
@@ -389,48 +371,63 @@
                   <p>Generation and shortest path algorithms.</p>
                   <p>Tools: Python, Pygame</p>
                 </div>
-                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/mazealgorithms">View code</a>
+                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://github.com/andyphandy/mazealgorithms">View code</a>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1/tetris-lua">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyphandy/tetris-lua">
                 <img class="card-img-top" alt="Tetris project" src="assets/tetris.gif">
               </a>
               <div class="card-body">
                 <div class="card-text">
                   <h4>Tetris Lua</h4>
-                  <p>Fully customizable, SRS-standard Tetris. </p>
+                  <p>Fully customizable, SRS-standard Tetris.</p>
                   <p>Tools: Lua, LOVE2D.</p>
                 </div>
-                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/tetris-lua">View code</a>
+                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://github.com/andyphandy/tetris-lua">View code</a>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-4 shadow-sm">
-              <a href="https://spotify-sort.herokuapp.com/">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyphandy/spotifysort">
                 <img class="card-img-top" alt="Spotify sort project" src="assets/spotify_website.JPG">
               </a>
               <div class="card-body">
                 <div class="card-text">
                   <h4>SpotifySort</h4>
-                  <p>Sort your Spotify playlists.</p>
-                  <p>Tools: React, Heroku, Node.js, JSON, Bootstrap</p>
+                  <p>Sort your Spotify playlists. (Live demo no longer hosted.)</p>
+                  <p>Tools: React, Node.js, Bootstrap</p>
                 </div>
-                <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary" href="https://spotify-sort.herokuapp.com/">View website</a>
-                  <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/spotifysort">View code</a>
+                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://github.com/andyphandy/spotifysort">View code</a>
+              </div>
+            </div>
+          </div>
+          <!-- [Add: duplicate this card block for a newer project. Replace href, alt, h4, description, tools, and image.] -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card mb-4 shadow-sm">
+              <a target="_blank" rel="noopener noreferrer" href="#">
+                <img class="card-img-top" alt="New project placeholder" src="assets/website.png">
+              </a>
+              <div class="card-body">
+                <div class="card-text">
+                  <h4>[Add: Project name]</h4>
+                  <p>[Add: one-line description of what it does.]</p>
+                  <p>Tools: [Add: stack]</p>
                 </div>
+                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="#">View code</a>
               </div>
             </div>
           </div>
         </div>
-        <p>Check out my GitLab for more:</p>
-        <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1" class="contact">
-          <img src="assets/gitlab.png" alt="Gitlab icon" class="contact-img">
-          <span>https://gitlab.cs.washington.edu/aphan1</span>
+        <p>Check out my GitHub for more:</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyphandy" class="contact">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-img" style="color:#333;">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.13v3.15c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+          <span>github.com/andyphandy</span>
         </a>
       </div>
     </section>
@@ -440,28 +437,34 @@
       <div class="container text-center my-5 py-5" data-aos="fade-down">
         <h2 class="purple text-center">Let's connect.</h2>
         <hr>
-        <h3>I'm currently available for work.</h3>
-        <p>Like what you see? Let's work together. Here are ways to contact me.</p>
-        <div>
-          <div class="row">
-            <div class="col-12 col-md-9 offset-md-3 col-lg-8 offset-lg-4">
-              <ul class="list-group text-left">
-                <li class="list-group-item border-0">
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andy-phan-cs/" class="contact">
-                    <img src="assets/linkedin.png" alt="LinkedIn icon" class="contact-img">
-                    <span>www.linkedin.com/in/andy-phan-cs</span>
-                  </a>
-                </li>
-                <li class="list-group-item border-0">
-                  <a href="mailto:aphan1@cs.washington.edu" class="contact">
-                    <img src="assets/gmail.png" alt="Gmail icon" class="contact-img">
-                    <span>mailto:aphan1@cs.washington.edu</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <h3>Always happy to connect.</h3>
+        <p>Reach out about engineering, side projects, or anything else.</p>
+        <div class="row">
+          <div class="col-12 col-md-9 offset-md-3 col-lg-8 offset-lg-4">
+            <ul class="list-group text-start">
+              <li class="list-group-item border-0">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyphandy" class="contact">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-img" style="color:#333;">
+                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.13v3.15c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                  </svg>
+                  <span>github.com/andyphandy</span>
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andy-phan-cs/" class="contact">
+                  <img src="assets/linkedin.png" alt="LinkedIn icon" class="contact-img">
+                  <span>linkedin.com/in/andy-phan-cs</span>
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="mailto:aphan1@cs.washington.edu" class="contact">
+                  <img src="assets/gmail.png" alt="Gmail icon" class="contact-img">
+                  <span>aphan1@cs.washington.edu</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <hr>
+        </div>
       </div>
     </section>
 
@@ -470,30 +473,29 @@
       <div class="footer-copyright">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-8 text-left">
+            <div class="col-12 col-md-8 text-start">
               <p>
                 Header: <a target="_blank" rel="noopener noreferrer" href="https://uwphotos.smugmug.com/Places-UW-and-WA/Pacific-Northwest-PNW/i-9Nrcbfg/A">Mount Rainier</a>.
                 Education: <a target="_blank" rel="noopener noreferrer" href="http://staff.washington.edu/paymana/uw_photos.html">The Quad</a>.
                 Portfolio: <a target="_blank" rel="noopener noreferrer" href="https://uwphotos.smugmug.com/Cherry-Blossoms/i-dSWSGkR/A">The Quad 2</a>.
               </p>
             </div>
-            <div class="col-12 col-md-4 text-right">
-              <p> © 2020 <a href="">Andy Phan</a>. All rights reserved.</p>
+            <div class="col-12 col-md-4 text-end">
+              <p> © <script>document.write(new Date().getFullYear())</script> <a href="#">Andy Phan</a>. All rights reserved.</p>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- AOS Animations Library -->
     <script>
       AOS.init({
-        duration: 1800,
+        duration: 800,
         once: true,
       });
     </script>
