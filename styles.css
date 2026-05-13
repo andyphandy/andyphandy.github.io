@@ -72,11 +72,6 @@ h1 {
   line-height: 1.05;
 }
 
-h1 em {
-  font-style: italic;
-  color: var(--accent);
-}
-
 h2 {
   font-size: clamp(2rem, 3.6vw, 2.75rem);
   line-height: 1.15;
@@ -772,48 +767,5 @@ footer.site-footer a:hover {
   .project-row[data-reveal] .project-content {
     opacity: 1 !important;
     transform: none !important;
-  }
-  .cursor-trail {
-    display: none !important;
-  }
-}
-
-/* ---------- Cursor dot-trail ---------- */
-
-.cursor-trail {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 200;
-}
-
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
-  will-change: transform, opacity;
-  transition: opacity 0.25s ease;
-  mix-blend-mode: screen;
-}
-
-.cursor-dot[data-i="0"] {
-  width: 10px;
-  height: 10px;
-  opacity: 0.95;
-}
-
-.cursor-dot[data-i="1"] { opacity: 0.65; }
-.cursor-dot[data-i="2"] { opacity: 0.45; width: 7px; height: 7px; }
-.cursor-dot[data-i="3"] { opacity: 0.25; width: 6px; height: 6px; }
-.cursor-dot[data-i="4"] { opacity: 0.12; width: 5px; height: 5px; }
-
-@media (hover: none), (pointer: coarse) {
-  .cursor-trail {
-    display: none;
   }
 }
