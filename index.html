@@ -19,7 +19,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
 
     <title>Andy Phan — Software Engineer</title>
@@ -44,14 +43,14 @@
 
       <section class="hero" id="top">
         <div class="container">
-          <p class="eyebrow" data-aos="fade-up">Software engineer</p>
-          <h1 data-aos="fade-up" data-aos-delay="60">Hi, I'm Andy.</h1>
-          <p class="lede" data-aos="fade-up" data-aos-delay="120">
+          <p class="eyebrow">Software engineer</p>
+          <h1>Hi, I'm Andy.</h1>
+          <p class="lede">
             I'm a software engineer based in [Add: location], currently
             [Add: building X at Company]. Computer science graduate from the
             University of Washington with a focus on systems and machine learning.
           </p>
-          <div class="hero-cta" data-aos="fade-up" data-aos-delay="180">
+          <div class="hero-cta">
             <a href="#work" class="btn-primary">See my work</a>
             <a href="assets/Andy_Phan_Resume.pdf" download class="btn-ghost">Download résumé</a>
           </div>
@@ -60,87 +59,70 @@
 
       <section class="work" id="work">
         <div class="container">
-          <div class="section-head" data-aos="fade-up">
+          <div class="section-head" data-reveal>
             <h2>Selected work</h2>
             <a class="more-link" href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer">More on GitHub →</a>
           </div>
-          <div class="work-grid">
 
-            <article class="work-card" data-aos="fade-up">
-              <a class="work-thumb" href="https://andyphandy.github.io/">
-                <img src="assets/website.png" alt="Screenshot of this website" loading="lazy">
-              </a>
-              <div class="work-body">
-                <h3>Personal Website</h3>
-                <p>This portfolio site. A minimalist, dark-theme single-page build.</p>
+          <!--
+            [Add: For each project, replace the placeholder image markup with:
+              <img src="assets/your-screenshot.jpg" alt="..." loading="lazy">
+            and fill in title, description, chips, and links.]
+          -->
+          <div class="project-list">
+
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="01" aria-hidden="true"></span>
+              </div>
+              <div class="project-content">
+                <span class="project-number">Project 01</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
                 <ul class="chips">
-                  <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
                 </ul>
-                <div class="work-links">
-                  <a href="https://andyphandy.github.io/">Live ↗</a>
-                  <a href="https://github.com/andyphandy/andyphandy.github.io" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
+                  <a href="#">Code ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="work-card" data-aos="fade-up" data-aos-delay="60">
-              <a class="work-thumb" href="https://github.com/andyphandy/mazealgorithms" target="_blank" rel="noopener noreferrer">
-                <img src="assets/maze.gif" alt="Animated maze generation and shortest-path algorithm" loading="lazy">
-              </a>
-              <div class="work-body">
-                <h3>MazeAlgorithms</h3>
-                <p>Maze generation and shortest-path visualization.</p>
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="02" aria-hidden="true"></span>
+              </div>
+              <div class="project-content">
+                <span class="project-number">Project 02</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
                 <ul class="chips">
-                  <li>Python</li><li>Pygame</li>
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
                 </ul>
-                <div class="work-links">
-                  <a href="https://github.com/andyphandy/mazealgorithms" target="_blank" rel="noopener noreferrer">Code ↗</a>
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
+                  <a href="#">Code ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="work-card" data-aos="fade-up" data-aos-delay="120">
-              <a class="work-thumb" href="https://github.com/andyphandy/tetris-lua" target="_blank" rel="noopener noreferrer">
-                <img src="assets/tetris.gif" alt="Animated gameplay of a custom Tetris clone" loading="lazy">
-              </a>
-              <div class="work-body">
-                <h3>Tetris</h3>
-                <p>Customizable, SRS-standard Tetris built from scratch.</p>
-                <ul class="chips">
-                  <li>Lua</li><li>LÖVE2D</li>
-                </ul>
-                <div class="work-links">
-                  <a href="https://github.com/andyphandy/tetris-lua" target="_blank" rel="noopener noreferrer">Code ↗</a>
-                </div>
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="03" aria-hidden="true"></span>
               </div>
-            </article>
-
-            <article class="work-card" data-aos="fade-up" data-aos-delay="180">
-              <a class="work-thumb" href="https://github.com/andyphandy/spotifysort" target="_blank" rel="noopener noreferrer">
-                <img src="assets/spotify_website.JPG" alt="Screenshot of SpotifySort web app" loading="lazy">
-              </a>
-              <div class="work-body">
-                <h3>SpotifySort</h3>
-                <p>Sort your Spotify playlists by audio attributes. Live demo no longer hosted.</p>
+              <div class="project-content">
+                <span class="project-number">Project 03</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
                 <ul class="chips">
-                  <li>React</li><li>Node.js</li>
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
                 </ul>
-                <div class="work-links">
-                  <a href="https://github.com/andyphandy/spotifysort" target="_blank" rel="noopener noreferrer">Code ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- [Add: duplicate the article block above for a newer project. Replace href, alt, h3, description, chips, and image.] -->
-            <article class="work-card placeholder" data-aos="fade-up" data-aos-delay="240">
-              <span class="work-thumb" aria-hidden="true"></span>
-              <div class="work-body">
-                <h3>[Add: Project name]</h3>
-                <p>[Add: one-line description of what it does.]</p>
-                <ul class="chips">
-                  <li>[Add: stack]</li>
-                </ul>
-                <div class="work-links">
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
                   <a href="#">Code ↗</a>
                 </div>
               </div>
@@ -153,7 +135,7 @@
       <section class="about" id="about">
         <div class="container">
           <div class="about-grid">
-            <div class="bio" data-aos="fade-up">
+            <div class="bio" data-reveal>
               <p class="eyebrow">About</p>
               <p>
                 Software engineer. I graduated from the Paul G. Allen School at the
@@ -169,7 +151,7 @@
                 Raspberry Pi.
               </p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="80">
+            <div data-reveal style="--reveal-delay: 120ms;">
               <div class="skills">
                 <h3>Languages</h3>
                 <ul class="chips">
@@ -199,12 +181,12 @@
 
       <section class="contact" id="contact">
         <div class="container">
-          <p class="eyebrow" data-aos="fade-up">Contact</p>
-          <h2 data-aos="fade-up" data-aos-delay="60">Let's connect.</h2>
-          <p class="lede" data-aos="fade-up" data-aos-delay="120">
+          <p class="eyebrow" data-reveal>Contact</p>
+          <h2 data-reveal style="--reveal-delay: 80ms;">Let's connect.</h2>
+          <p class="lede" data-reveal style="--reveal-delay: 160ms;">
             Always happy to talk engineering, side projects, or anything else.
           </p>
-          <ul class="contact-links" data-aos="fade-up" data-aos-delay="180">
+          <ul class="contact-links" data-reveal style="--reveal-delay: 240ms;">
             <li>
               <a href="mailto:aphan1@cs.washington.edu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -236,13 +218,25 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 600,
-        easing: 'ease-out',
-        once: true,
-      });
+      // Reveal-on-scroll via IntersectionObserver
+      (function () {
+        var targets = document.querySelectorAll('[data-reveal]');
+        if (!targets.length) return;
+        if (!('IntersectionObserver' in window)) {
+          targets.forEach(function (el) { el.classList.add('in-view'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+        targets.forEach(function (el) { io.observe(el); });
+      })();
 
       // Mobile nav toggle
       (function () {
