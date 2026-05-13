@@ -34,9 +34,10 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
         <ul class="nav-links">
-          <li><a href="#work">Work</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
+          <span class="nav-indicator" aria-hidden="true"></span>
         </ul>
       </div>
     </header>
@@ -107,9 +108,9 @@
 
       <section class="work" id="work">
         <div class="container">
-          <div class="section-head" data-reveal>
-            <h2>Selected work</h2>
-            <a class="more-link" href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer">More on GitHub →</a>
+          <div class="section-head">
+            <h2 data-reveal class="reveal-wipe">Selected work</h2>
+            <a class="more-link" href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer" data-reveal style="--reveal-delay: 200ms;">More on GitHub →</a>
           </div>
 
           <!--
@@ -183,7 +184,7 @@
       <section class="contact" id="contact">
         <div class="container">
           <p class="eyebrow" data-reveal>Contact</p>
-          <h2 data-reveal style="--reveal-delay: 80ms;">Let's connect.</h2>
+          <h2 data-reveal class="reveal-wipe" style="--reveal-delay: 80ms;">Let's connect.</h2>
           <p class="lede" data-reveal style="--reveal-delay: 160ms;">
             Always happy to talk engineering, side projects, or anything else.
           </p>
@@ -220,6 +221,57 @@
     </footer>
 
     <script>
+      // Scrollspy nav indicator: moves a small underline beneath the link for
+      // whichever section is currently the "active" one (top above 35vh).
+      (function () {
+        var navList = document.querySelector('.nav-links');
+        var indicator = document.querySelector('.nav-indicator');
+        if (!navList || !indicator) return;
+        var entries = ['#about', '#work', '#contact']
+          .map(function (id) {
+            return {
+              section: document.querySelector(id),
+              link: navList.querySelector('a[href="' + id + '"]')
+            };
+          })
+          .filter(function (e) { return e.section && e.link; });
+        if (!entries.length) return;
+
+        function findActive() {
+          var threshold = window.innerHeight * 0.35;
+          var active = null;
+          entries.forEach(function (e) {
+            var top = e.section.getBoundingClientRect().top;
+            if (top <= threshold) active = e;
+          });
+          return active;
+        }
+
+        var pending = false;
+        function update() {
+          if (pending) return;
+          pending = true;
+          requestAnimationFrame(function () {
+            pending = false;
+            var active = findActive();
+            if (!active) {
+              indicator.classList.remove('visible');
+              return;
+            }
+            var linkRect = active.link.getBoundingClientRect();
+            var listRect = navList.getBoundingClientRect();
+            var x = linkRect.left - listRect.left;
+            indicator.style.width = linkRect.width + 'px';
+            indicator.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+            indicator.classList.add('visible');
+          });
+        }
+
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+      })();
+
       // Reveal-on-scroll via IntersectionObserver
       (function () {
         var targets = document.querySelectorAll('[data-reveal]');
