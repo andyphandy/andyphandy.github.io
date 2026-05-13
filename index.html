@@ -13,7 +13,9 @@
     <meta property="og:url" content="https://andyphandy.github.io/">
     <meta name="twitter:card" content="summary">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -46,7 +48,7 @@
           <p class="eyebrow">Software engineer</p>
           <h1>
             <span class="hero-word"><span class="hero-word-inner">Hi,</span></span>
-            <span class="hero-word"><span class="hero-word-inner">I'm</span></span>
+            <span class="hero-word"><span class="hero-word-inner"><em>I'm</em></span></span>
             <span class="hero-word"><span class="hero-word-inner">Andy.</span></span>
           </h1>
           <p class="lede">
@@ -210,6 +212,14 @@
 
     </main>
 
+    <div class="cursor-trail" aria-hidden="true">
+      <span class="cursor-dot" data-i="0"></span>
+      <span class="cursor-dot" data-i="1"></span>
+      <span class="cursor-dot" data-i="2"></span>
+      <span class="cursor-dot" data-i="3"></span>
+      <span class="cursor-dot" data-i="4"></span>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
         <span>&copy; <script>document.write(new Date().getFullYear())</script> Andy Phan</span>
@@ -256,6 +266,45 @@
             raf = null;
           });
         });
+      })();
+
+      // Cursor dot-trail (5 lerp-chained dots; lead follows cursor, others follow each other)
+      (function () {
+        var coarse = window.matchMedia('(pointer: coarse)');
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (coarse.matches || reduced.matches) return;
+        var dots = Array.prototype.slice.call(document.querySelectorAll('.cursor-dot'));
+        if (!dots.length) return;
+        var lerps = [0.38, 0.24, 0.17, 0.12, 0.08];
+        var pos = dots.map(function () { return { x: -100, y: -100 }; });
+        var target = { x: -100, y: -100 };
+        var moved = false;
+        window.addEventListener('mousemove', function (e) {
+          target.x = e.clientX;
+          target.y = e.clientY;
+          if (!moved) {
+            // Initial placement to avoid the long sweep from (-100,-100)
+            pos.forEach(function (p) { p.x = target.x; p.y = target.y; });
+            moved = true;
+          }
+        }, { passive: true });
+        window.addEventListener('mouseleave', function () {
+          dots.forEach(function (d) { d.style.opacity = '0'; });
+        });
+        window.addEventListener('mouseenter', function () {
+          dots.forEach(function (d) { d.style.opacity = ''; });
+        });
+        function tick() {
+          var prev = target;
+          for (var i = 0; i < pos.length; i++) {
+            pos[i].x += (prev.x - pos[i].x) * lerps[i];
+            pos[i].y += (prev.y - pos[i].y) * lerps[i];
+            dots[i].style.transform = 'translate3d(' + pos[i].x + 'px, ' + pos[i].y + 'px, 0) translate(-50%, -50%)';
+            prev = pos[i];
+          }
+          requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
       })();
 
       // Mobile nav toggle
