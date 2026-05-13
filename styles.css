@@ -718,13 +718,8 @@ footer.site-footer a:hover {
   display: inline-block;
   overflow: hidden;
   padding-bottom: 0.18em;
-  margin-right: 0.24em;
   vertical-align: bottom;
   line-height: 1;
-}
-
-.hero-word:last-child {
-  margin-right: 0;
 }
 
 .hero-word-inner {
