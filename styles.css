@@ -752,21 +752,30 @@ footer.site-footer a:hover {
   transform: translate3d(0, 0, 0);
 }
 
-/* Wipe-style reveal: precise left-to-right clip-path wipe.
-   Apply alongside data-reveal to opt h2-style elements into a sharper
-   reveal than the default fade-up. Uses polygon() (consistent units)
-   so descenders aren't clipped at rest -- the path covers the full
-   element, just collapsed to zero width until .in-view. */
+/* Wipe-style reveal: left-to-right reveal via a pseudo-element overlay.
+   Earlier versions hid the element with clip-path, but Chrome's
+   IntersectionObserver treats elements clipped to zero visual area as
+   non-intersecting, so .in-view was never added and the heading stayed
+   invisible. Overlaying instead leaves the element's box untouched. */
 [data-reveal].reveal-wipe {
+  position: relative;
   opacity: 1;
   transform: none;
-  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-  transition: clip-path 950ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
 }
 
-[data-reveal].reveal-wipe.in-view {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+[data-reveal].reveal-wipe::after {
+  content: "";
+  position: absolute;
+  inset: 0 -0.05em;
+  background: var(--bg);
+  transform-origin: right center;
+  transition: transform 950ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  pointer-events: none;
+}
+
+[data-reveal].reveal-wipe.in-view::after {
+  transform: scaleX(0);
 }
 
 /* Project rows: each side animates separately for a "media zooms in, copy slides in" feel */
@@ -845,8 +854,8 @@ footer.site-footer a:hover {
     opacity: 1 !important;
     transform: none !important;
   }
-  [data-reveal].reveal-wipe {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+  [data-reveal].reveal-wipe::after {
+    transform: scaleX(0) !important;
   }
   .eyebrow::before {
     transform: scaleX(1) !important;
