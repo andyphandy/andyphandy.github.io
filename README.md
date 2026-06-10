@@ -1,3 +1,3 @@
 # My Website
 
-Site can be found [here](https://aphan1.pages.cs.washington.edu/personal-website).
+Site can be found [here](https://andyphandy.github.io).
