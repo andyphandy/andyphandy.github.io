@@ -41,6 +41,15 @@ nav a {
   border-color: #b7a57a;
 }
 
+/*
+  The default gold is too light to read against the beige section
+  background (e.g. the Portfolio "What I can do." and Education headers),
+  so use a darker, higher-contrast gold for headings on beige.
+*/
+.bg-beige h2.gold {
+  color: #85754d;
+}
+
 .bg-beige {
   background-color: #f2efe0;
 }
