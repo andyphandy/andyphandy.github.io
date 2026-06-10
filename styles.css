@@ -763,6 +763,16 @@ footer.site-footer a:hover {
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   transition: clip-path 950ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
+  /*
+    Override the `will-change: opacity, transform` inherited from
+    [data-reveal]. That hint promotes the heading to its own compositing
+    layer, and on Chrome desktop the clip-path isn't always repainted once
+    the wipe settles on a static page -- leaving the heading clipped to zero
+    width (invisible). The wipe is a one-off clip-path transition that stays
+    smooth on the main thread, so drop the layer promotion entirely to avoid
+    the stranded-layer repaint bug.
+  */
+  will-change: auto;
 }
 
 [data-reveal].reveal-wipe.in-view {
