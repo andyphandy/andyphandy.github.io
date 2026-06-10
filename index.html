@@ -1,501 +1,333 @@
 <!DOCTYPE html>
-<!--
-  This is the index.html page for my personal website project. It is essentially
-  an interactice resume that gives a summary of me, my education, my skills and courses,
-  my portfolio, and ways to contact me.
-  ***
--->
 <html lang="en">
   <head>
-    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0e0e10">
+    <meta name="description" content="Andy Phan — software engineer. UW CSE graduate. Portfolio, projects, and ways to get in touch.">
+    <meta name="author" content="Andy Phan">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Andy Phan — Software Engineer">
+    <meta property="og:description" content="Software engineer. UW CSE graduate. Portfolio, projects, and ways to get in touch.">
+    <meta property="og:url" content="https://andyphandy.github.io/">
+    <meta name="twitter:card" content="summary">
 
-    <!-- Website icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
-    <script src="jquery.js"></script>
-
-    <title>Andy Phan - Developer</title>
+    <title>Andy Phan — Software Engineer</title>
   </head>
   <body>
 
-    <!-- NAV BAR -->
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
-        <div class="container d-flex">
-          <span class="w-100 d-lg-none d-md-none d-block"></span>
-          <a class="navbar-brand" href="">
-            Andy Phan
-          </a>
-          <div class="w-50 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse text-center" id="navBar">
-            <ul class="nav navbar-nav ml-auto flex-nowrap">
-              <li class="nav-item">
-                <a href="#about-me" class="nav-link m-2 menu-item">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a href="#education" class="nav-link m-2 menu-item">Education</a>
-              </li>
-              <li class="nav-item">
-                <a href="#skills" class="nav-link m-2 menu-item">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a href="#courses" class="nav-link m-2 menu-item">Courses</a>
-              </li>
-              <li class="nav-item">
-                <a href="#portfolio" class="nav-link m-2 menu-item">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact-me" class="nav-link m-2 menu-item">Contact Me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <header class="site-nav">
+      <div class="container">
+        <a class="brand" href="#top">Andy Phan</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </ul>
+      </div>
     </header>
 
-    <!-- HEADER IMAGE -->
-    <div class="masthead">
-      <div class="container h-100">
-        <div class="row h-100 align-items-center">
-          <div class="col-12 text-center text-md-left text-light">
-            <h1 data-aos="fade-down">Hi! I'm Andy.</h1>
-            <p data-aos="fade-right" data-aos-delay="1800">I'm a software/web developer.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about-me">
-      <div class="container my-5 py-5" data-aos="fade-down">
-        <div class="row">
-          <div class="col-12 col-md-8">
-            <h2 class="purple">Who I am.</h2>
-            <hr>
-            <div class="row">
-              <div class="col-12 col-lg-10">
-                <p>
-                  Software developer. I am a senior majoring in computer science at the University
-                  of Washington. Ever since I was a kid, I have been passionate about all things computers, and this brought
-                  me to the Paul G. Allen School. The most valuable lesson I've learned here is the importance
-                  of writing clean, maintainable code that not only I can understand, but others can, too.
-                </p>
-                <p>
-                  In addition to software development, I create slick, cutting-edge websites.
-                  After taking my class in web development, I find joy in creating full-stack websites
-                  using HTML, CSS, JavaScript for the front-end and SQL and Node.js for the back-end. At this
-                  time, I am strengthening my back-end skills.
-                </p>
-                <p>
-                  When I'm not studying or working on projects, I love to play the piano, go on long runs,
-                  and mess around on my Raspberry Pi.
-                </p>
-                <p>
-                  Feel free to download my resume and/or <a href="#contact-me">contact me.</a>
-                </p>
-                <div class="d-flex justify-content-between">
-                  <a type="button" class="btn btn-primary" href="assets/Andy_Phan_Resume.pdf" download>Download my resume</a>
-                  <div>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/andyphandy" target="_blank" rel="noopener noreferrer" class="fun-media">
-                      <img src="assets/instagram.png" alt="Instagram icon" class="social-media">
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/andy.phan.771" target="_blank" rel="noopener noreferrer" class="fun-media">
-                      <img src="assets/facebook.png" alt="Facebook icon" class="social-media">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 offset-3 col-md-3 offset-md-1 mt-5 mt-md-3">
-            <img src="assets/me.png" alt="A photo of Andy" class="img-fluid gold main-img">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section class="bg-beige" id="education">
-      <div class="container my-5 py-5" data-aos="fade-down">
-        <div class="row">
-          <div class="col-6 offset-3 col-md-3 offset-md-0 mb-5 mb-md-3 d-md-flex align-items-center">
-            <img src="assets/udub.png" alt="A photo of University of Washington" class="img-fluid purple main-img">
-          </div>
-          <div class="col-12 col-md-8 offset-md-1">
-            <h2 class="gold">Where I learned.</h2>
-            <hr>
-            <div class="row my-3" data-aos="fade-down">
-              <div class="col-4">
-                <h3>University of Washington</h3>
-                <p>Sep 2019 - Mar 2022
-                  <br> GPA: 3.81
-                </p>
-              </div>
-              <div class="col-7 offset-1">
-                <h4>B.S. Computer Science</h4>
-                <p>
-                  Currently in progress. I am honored to be studying at the Paul G. Allen School of
-                  Computer Science and Engineering. Here, I am learning about machine learning,
-                </p>
-                artificial intelligence, security, networks, software programming, and so much more.
-              </div>
-            </div>
-            <div class="row my-3" data-aos="fade-down">
-              <div class="col-4">
-                <h3>South Puget Sound CC</h3>
-                <p>Sep 2017 - Jun 2019
-                  <br> GPA: 3.95
-                </p>
-              </div>
-              <div class="col-7 offset-1">
-                <h4>Associates of Arts Transfer</h4>
-                <p>
-                  As a high-schooler, I took college courses at a local community college through the
-                  Running Start program. There, I studied introductory programming, calculus-based physics,
-                  public speaking, civics, and social problems.
-                </p>
-              </div>
-            </div>
-              <div class="row my-3" data-aos="fade-down">
-                <div class="col-4">
-                  <h3>A.G. West Black Hills HS</h3>
-                  <p>Sep 2015 - Jun 2019
-                    <br> GPA: 3.97
-                  </p>
-                </div>
-                <div class="col-7 offset-1">
-                  <h4>High School Diploma</h4>
-                  <p>
-                    While in high school, I excelled in my math, science, and robotics classes. I had
-                    always been competitive and passionate in my interests, so I worked hard to be the
-                    best in music competitions and sports.
-                  </p>
-                </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COURSES AND SKILLS SECTION -->
-    <section id="courses-skills">
-      <div class="container my-5 py-5" data-aos="fade-down">
-        <div class="row">
-          <div class="col-12 col-lg-6" id="skills">
-            <h2 class="purple text-center">What I've learned.</h2>
-            <hr>
-            <h3 class="text-center">Hard Skills</h3>
-            <ul class="list-group skills-list">
-              <li class="list-group-item border-0 d-flex">
-                <span>Java</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>OOP</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>HTML</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>CSS</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>JavaScript</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>Node.js</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>JSON</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>Python</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>Bootstrap</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>React</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>SQL</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>Git</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>C/C++</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-              <li class="list-group-item border-0 d-flex">
-                <span>Lua</span>
-                <div class="stars d-flex align-items-center">
-                  <img src="assets/star.png" alt="Gold star">
-                </div>
-              </li>
-            </ul>
-            <h3 class="text-center">Soft Skills</h3>
-            <ul class="list-group skills-list">
-              <li class="list-group-item border-0">Problem Solving</li>
-              <li class="list-group-item border-0">Time Management</li>
-              <li class="list-group-item border-0">Organization</li>
-              <li class="list-group-item border-0">Reliability</li>
-              <li class="list-group-item border-0">Adaptability</li>
-              <li class="list-group-item border-0">Dedication</li>
-              <li class="list-group-item border-0">Multitasking</li>
-              <li class="list-group-item border-0">Attention to Detail</li>
-              <li class="list-group-item border-0">Cooperation</li>
-              <li class="list-group-item border-0">Respectfulness</li>
-              <li class="list-group-item border-0">Empathy</li>
-              <li class="list-group-item border-0">Teamwork</li>
-              <li class="list-group-item border-0">Public Speaking</li>
-              <li class="list-group-item border-0">Listening</li>
-            </ul>
-          </div>
-          <div class="col-12 col-lg-6 top-buffer" id="courses">
-            <h2 class="purple text-center">What I've taken.</h2>
-            <hr>
-            <h3 class="text-center">In Progress:</h3>
-              <li class="list-group-item border-0">CSE 451 - Introduction to Operating Systems</li> 
-              <li class="list-group-item border-0">CSE 452 - Distributed Systems</li>
-              <li class="list-group-item border-0">CSE 455 - Computer Vision</li>
-            <ul class="list-group">
-
-            </ul>
-            <h3 class="text-center">Completed:</h3>
-            <ul class="list-group">
-              <li class="list-group-item border-0">CSE 446 - Machine Learning</li> 
-              <li class="list-group-item border-0">CSE 473 - Introduction to Artificial Intelligence</li>
-              <li class="list-group-item border-0">CSE 421 - Introduction to Algorithms</li>
-              <li class="list-group-item border-0">CSE 461 - Introduction to Computer Networks</li>
-              <li class="list-group-item border-0">CSE 484 - Computer Security</li>
-              <li class="list-group-item border-0">CSE 333 - Systems Programming</li>
-              <li class="list-group-item border-0">CSE 444 - Database Systems Internals</li>
-              <li class="list-group-item border-0">CSE 391 - Systems and Software Tools</li>
-              <li class="list-group-item border-0">CSE 351 - The Hardware/Software Interface</li>
-              <li class="list-group-item border-0">CSE 344 - Introduction to Data Management</li>
-              <li class="list-group-item border-0">CSE 331 - Software Design and Implementation</li>
-              <li class="list-group-item border-0">CSE 332 - Data Structures and Algorithms</li>
-              <li class="list-group-item border-0">CSE 312 - Foundations of Computing II</li>
-              <li class="list-group-item border-0">CSE 311 - Foundations of Computing I</li>
-              <li class="list-group-item border-0">CSE 154 - Web Programming</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section class="bg-beige" id="portfolio">
-      <div class="container text-center my-5 py-5" data-aos="fade-down">
-        <h2 class="gold text-center">What I can do.</h2>
-        <hr>
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="">
-                <img class="card-img-top" alt="A photo of my website" src="assets/website.png">
-              </a>
-              <div class="card-body">
-                <div class="card-text">
-                  <h4>Personal Website</h4>
-                  <p>An interactive resume website.</p>
-                  <p>Tools: HTML, CSS, Bootstrap, jQuery.</p>
-                </div>
-                <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary" href="https://andyphandy.github.io/">View website</a>
-                  <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/personal-website">View code</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1/mazealgorithms">
-                <img class="card-img-top" alt="Maze algorithm project" src="assets/maze.gif">
-              </a>
-              <div class="card-body">
-                <div class="card-text">
-                  <h4>MazeAlgorithms</h4>
-                  <p>Generation and shortest path algorithms.</p>
-                  <p>Tools: Python, Pygame</p>
-                </div>
-                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/mazealgorithms">View code</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1/tetris-lua">
-                <img class="card-img-top" alt="Tetris project" src="assets/tetris.gif">
-              </a>
-              <div class="card-body">
-                <div class="card-text">
-                  <h4>Tetris Lua</h4>
-                  <p>Fully customizable, SRS-standard Tetris. </p>
-                  <p>Tools: Lua, LOVE2D.</p>
-                </div>
-                <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/tetris-lua">View code</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-              <a href="https://spotify-sort.herokuapp.com/">
-                <img class="card-img-top" alt="Spotify sort project" src="assets/spotify_website.JPG">
-              </a>
-              <div class="card-body">
-                <div class="card-text">
-                  <h4>SpotifySort</h4>
-                  <p>Sort your Spotify playlists.</p>
-                  <p>Tools: React, Heroku, Node.js, JSON, Bootstrap</p>
-                </div>
-                <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary" href="https://spotify-sort.herokuapp.com/">View website</a>
-                  <a target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm btn-outline-secondary" href="https://gitlab.cs.washington.edu/aphan1/spotifysort">View code</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p>Check out my GitLab for more:</p>
-        <a target="_blank" rel="noopener noreferrer" href="https://gitlab.cs.washington.edu/aphan1" class="contact">
-          <img src="assets/gitlab.png" alt="Gitlab icon" class="contact-img">
-          <span>https://gitlab.cs.washington.edu/aphan1</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- CONTACT ME SECTION -->
-    <section id="contact-me">
-      <div class="container text-center my-5 py-5" data-aos="fade-down">
-        <h2 class="purple text-center">Let's connect.</h2>
-        <hr>
-        <h3>I'm currently available for work.</h3>
-        <p>Like what you see? Let's work together. Here are ways to contact me.</p>
-        <div>
-          <div class="row">
-            <div class="col-12 col-md-9 offset-md-3 col-lg-8 offset-lg-4">
-              <ul class="list-group text-left">
-                <li class="list-group-item border-0">
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andy-phan-cs/" class="contact">
-                    <img src="assets/linkedin.png" alt="LinkedIn icon" class="contact-img">
-                    <span>www.linkedin.com/in/andy-phan-cs</span>
-                  </a>
-                </li>
-                <li class="list-group-item border-0">
-                  <a href="mailto:aphan1@cs.washington.edu" class="contact">
-                    <img src="assets/gmail.png" alt="Gmail icon" class="contact-img">
-                    <span>mailto:aphan1@cs.washington.edu</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="page-footer pt-5 pb-3">
-      <div class="footer-copyright">
+      <section class="hero" id="top">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-8 text-left">
+          <p class="eyebrow">Software engineer</p>
+          <h1>
+            <span class="hero-word"><span class="hero-word-inner">I'm</span></span>
+            <span class="hero-word"><span class="hero-word-inner">Andy.</span></span>
+          </h1>
+          <p class="lede">
+            I'm a software engineer based in Seattle, WA, currently at Google.
+            Computer science graduate from the University of Washington with a
+            focus on systems and machine learning.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn-primary">See my work</a>
+            <a href="assets/Andy_Phan_Resume.pdf" download class="btn-ghost">Download résumé</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="bio" data-reveal>
+              <p class="eyebrow">About</p>
               <p>
-                Header: <a target="_blank" rel="noopener noreferrer" href="https://uwphotos.smugmug.com/Places-UW-and-WA/Pacific-Northwest-PNW/i-9Nrcbfg/A">Mount Rainier</a>.
-                Education: <a target="_blank" rel="noopener noreferrer" href="http://staff.washington.edu/paymana/uw_photos.html">The Quad</a>.
-                Portfolio: <a target="_blank" rel="noopener noreferrer" href="https://uwphotos.smugmug.com/Cherry-Blossoms/i-dSWSGkR/A">The Quad 2</a>.
+                Software engineer. I graduated from the Paul G. Allen School at the
+                University of Washington and have been at Google ever since.
+              </p>
+              <p>
+                I care about writing clean, maintainable code &mdash; the kind you can
+                hand to a teammate without an apology. These days that means contributing
+                to Chromium and PDFium, the open-source engines behind Chrome's rendering
+                and PDF viewer.
+              </p>
+              <p>
+                Away from the keyboard: running, climbing, lifting, piano, gaming.
               </p>
             </div>
-            <div class="col-12 col-md-4 text-right">
-              <p> © 2020 <a href="">Andy Phan</a>. All rights reserved.</p>
+            <div data-reveal style="--reveal-delay: 120ms;">
+              <div class="skills">
+                <h3>Languages</h3>
+                <ul class="chips">
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>C++</li>
+                </ul>
+              </div>
+              <div class="skills">
+                <h3>Tools &amp; Frameworks</h3>
+                <ul class="chips">
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>Git</li>
+                  <li>HTML / CSS</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-reveal class="reveal-wipe">Selected work</h2>
+            <a class="more-link" href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer" data-reveal style="--reveal-delay: 200ms;">More on GitHub →</a>
+          </div>
+
+          <!--
+            [Add: For each project, replace the placeholder image markup with:
+              <img src="assets/your-screenshot.jpg" alt="..." loading="lazy">
+            and fill in title, description, chips, and links.]
+          -->
+          <div class="project-list">
+
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="01" aria-hidden="true"></span>
+              </div>
+              <div class="project-content">
+                <span class="project-number">Project 01</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
+                <ul class="chips">
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
+                  <a href="#">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="02" aria-hidden="true"></span>
+              </div>
+              <div class="project-content">
+                <span class="project-number">Project 02</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
+                <ul class="chips">
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
+                  <a href="#">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row" data-reveal>
+              <div class="project-media">
+                <span class="project-media-empty" data-number="03" aria-hidden="true"></span>
+              </div>
+              <div class="project-content">
+                <span class="project-number">Project 03</span>
+                <h3 class="project-title">[Add: Project name]</h3>
+                <p class="project-desc">[Add: 1&ndash;2 sentences on what it does, the problem it solves, or what made it interesting to build.]</p>
+                <ul class="chips">
+                  <li>[Add: tech]</li>
+                  <li>[Add: tech]</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#">Live ↗</a>
+                  <a href="#">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <p class="eyebrow" data-reveal>Contact</p>
+          <h2 data-reveal class="reveal-wipe" style="--reveal-delay: 80ms;">Let's connect.</h2>
+          <p class="lede" data-reveal style="--reveal-delay: 160ms;">
+            Always happy to talk engineering, side projects, or anything else.
+          </p>
+          <ul class="contact-links" data-reveal style="--reveal-delay: 240ms;">
+            <li>
+              <a href="mailto:aphan1@cs.washington.edu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>aphan1@cs.washington.edu</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/andyphandy" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.13v3.15c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                <span>github.com/andyphandy</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/andy-phan-cs/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>linkedin.com/in/andy-phan-cs</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Andy Phan</span>
+        <a href="https://github.com/andyphandy/andyphandy.github.io" target="_blank" rel="noopener noreferrer">Source</a>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!-- AOS Animations Library -->
     <script>
-      AOS.init({
-        duration: 1800,
-        once: true,
-      });
+      // Scrollspy nav indicator: moves a small underline beneath the link for
+      // whichever section is currently the "active" one (top above 35vh).
+      (function () {
+        var navList = document.querySelector('.nav-links');
+        var indicator = document.querySelector('.nav-indicator');
+        if (!navList || !indicator) return;
+        var entries = ['#about', '#work', '#contact']
+          .map(function (id) {
+            return {
+              section: document.querySelector(id),
+              link: navList.querySelector('a[href="' + id + '"]')
+            };
+          })
+          .filter(function (e) { return e.section && e.link; });
+        if (!entries.length) return;
+
+        function findActive() {
+          var threshold = window.innerHeight * 0.35;
+          var active = null;
+          entries.forEach(function (e) {
+            var top = e.section.getBoundingClientRect().top;
+            if (top <= threshold) active = e;
+          });
+          return active;
+        }
+
+        var pending = false;
+        function update() {
+          if (pending) return;
+          pending = true;
+          requestAnimationFrame(function () {
+            pending = false;
+            var active = findActive();
+            if (!active) {
+              indicator.classList.remove('visible');
+              return;
+            }
+            var linkRect = active.link.getBoundingClientRect();
+            var listRect = navList.getBoundingClientRect();
+            var x = linkRect.left - listRect.left;
+            indicator.style.width = linkRect.width + 'px';
+            indicator.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+            indicator.classList.add('visible');
+          });
+        }
+
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+      })();
+
+      // Reveal-on-scroll via IntersectionObserver
+      (function () {
+        var targets = document.querySelectorAll('[data-reveal]');
+        if (!targets.length) return;
+        if (!('IntersectionObserver' in window)) {
+          targets.forEach(function (el) { el.classList.add('in-view'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+        targets.forEach(function (el) { io.observe(el); });
+      })();
+
+      // Cursor-tracked hero glow (skipped on touch / reduced-motion)
+      (function () {
+        var hero = document.querySelector('.hero');
+        if (!hero) return;
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var coarse = window.matchMedia('(pointer: coarse)');
+        if (reduced.matches || coarse.matches) return;
+        var raf = null;
+        hero.addEventListener('mousemove', function (e) {
+          if (raf) return;
+          raf = requestAnimationFrame(function () {
+            var rect = hero.getBoundingClientRect();
+            var x = ((e.clientX - rect.left) / rect.width) * 100;
+            var y = ((e.clientY - rect.top) / rect.height) * 100;
+            hero.style.setProperty('--mx', x + '%');
+            hero.style.setProperty('--my', y + '%');
+            raf = null;
+          });
+        });
+      })();
+
+      // Mobile nav toggle
+      (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        var links = document.querySelector('.nav-links');
+        if (!toggle || !links) return;
+        toggle.addEventListener('click', function () {
+          var open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        links.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      })();
     </script>
   </body>
 </html>
